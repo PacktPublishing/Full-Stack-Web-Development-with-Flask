@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UTA - Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}"/>
+</head>
+<body>
+
+<div class="container-fluid text-center top-container">
+    <img src="{{ url_for('static',filename='images/uta-logo-200.png')}}">
+</div>
+<div class="container">
+    {% include "includes/nav.html" %}
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+    {% include "includes/footer.html" %}
+</body>
+</html>    

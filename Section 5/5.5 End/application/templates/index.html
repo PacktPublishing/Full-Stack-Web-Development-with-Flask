@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Universal Tech Academy.</h1>
+
+            {% if login %}
+            <h3>Let's get started.</h3>
+            {% else %}
+            <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock %}
